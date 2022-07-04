@@ -45,9 +45,10 @@ async function createWidget() {
     }
     const config = {
         // Configuração inicial
+        external_id: "iiiii",
         locale: 'pt',
         country_codes: ['BR'],
-        institution_types: ['retail', 'business'],
+        institution_types: ['retail', 'business', 'fiscal', 'gig'],
         callback: (link, institution) => successCallbackFunction(link, institution),
         onExit: (data) => onExitCallbackFunction(),
         onEvent: (data) => onEventCallbackFunction()
