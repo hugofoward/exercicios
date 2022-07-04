@@ -23,7 +23,7 @@ function useScript(src) {
 
 async function createWidget() {
     function getAccessToken() { 
-        return fetch('http://localhost:3000/api/belvoConnect', {
+        return fetch('https://exercicios-two.vercel.app/api/belvoConnect', {
                 method: 'GET'
             }) 
             .then(response => response.json())

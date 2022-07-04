@@ -20,7 +20,7 @@ return client.connect()
         // OFX - footer
         transacoes.push('</BANKTRANLIST><LEDGERBAL><BALAMT></BALAMT><DTASOF></DTASOF></LEDGERBAL></STMTRS></STMTTRNRS></BANKMSGSRSV1></OFX>')
      
-        sendOFX(transacoes)
+        // sendOFX(transacoes)
 
         console.log(transacoes)
         res.json(response);
@@ -38,7 +38,7 @@ return client.connect()
 
 
 async function sendOFX(transacoes) {
-    return fetch('http://localhost:3000/api/belvoTransactions/', { method: 'POST', body: transacoes})
+    return fetch('https://exercicios-two.vercel.app/api/belvoTransactions/', { method: 'POST', body: transacoes})
     .then((res) => {
       res.json().then((response) => { console.log(response) })
     })
