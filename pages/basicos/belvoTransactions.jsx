@@ -6,7 +6,7 @@ export default function App() {
 }
 
 async function getTransactions() {
-    return fetch('https://exercicios-two.vercel.app/api/belvoTransactions/', { method: 'GET' })
+    return fetch('https://exercicios-two.vercel.app/api/belvoTransactions', { method: 'GET' })
     .then((res) => {
       res.json().then((response) => { console.log(response) })
     })

@@ -37,11 +37,11 @@ return client.connect()
 }
 
 
-async function sendOFX(transacoes) {
-    return fetch('https://exercicios-two.vercel.app/api/belvoTransactions/', { method: 'POST', body: transacoes})
-    .then((res) => {
-      res.json().then((response) => { console.log(response) })
-    })
-    // .then((data) => {data})
-    .catch(error => console.error('Error:', error))
-}
+// async function sendOFX(transacoes) {
+//     return fetch('https://exercicios-two.vercel.app/api/belvoTransactions/', { method: 'POST', body: transacoes})
+//     .then((res) => {
+//       res.json().then((response) => { console.log(response) })
+//     })
+//     // .then((data) => {data})
+//     .catch(error => console.error('Error:', error))
+// }
