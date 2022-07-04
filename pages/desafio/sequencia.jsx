@@ -1,7 +1,7 @@
 import { useEffect,useState } from "react";
 import Numero from "../../components/sequencia/Numero";
 
-export default function sequencia(){
+export default function Sequencia(){
     const [qtdSequencia,set_qtdSequencia] = useState([])
     useEffect(() => set_qtdSequencia(1), [])
     return (
