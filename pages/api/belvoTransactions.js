@@ -21,7 +21,7 @@ return client.connect()
         transacoes.push('</BANKTRANLIST><LEDGERBAL><BALAMT></BALAMT><DTASOF></DTASOF></LEDGERBAL></STMTRS></STMTTRNRS></BANKMSGSRSV1></OFX>')
      
         // sendOFX(transacoes)
-
+        console.log(transacoes)
         // console.log(transacoes)
         res.json(transacoes);
       })
