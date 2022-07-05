@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export default function App() {
+export default function App(props) {
   useScript('https://cdn.belvo.io/belvo-widget-1-stable.js');
   return ( <div id="belvo" /> );
 }
@@ -21,9 +21,10 @@ function useScript(src) {
   )
 }
 
-async function createWidget() {
+async function createWidget(props) {
     function getAccessToken() { 
-        return fetch('https://exercicios-two.vercel.app/api/belvoConnect', {
+        // return fetch('https://exercicios-two.vercel.app/api/belvoConnect', {
+        return fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/belvoConnect`, {
                 method: 'GET'
             }) 
             .then(response => response.json())
