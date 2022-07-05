@@ -1,6 +1,9 @@
 export default async(req,res) => {
 
 var belvo = require('belvo').default;
+console.log(process.env.CLIENT_ID)
+console.log(process.env.SECRET_ID)
+console.log(process.env.ENVIRONMENT_NAME)
 var client = new belvo(process.env.CLIENT_ID, process.env.SECRET_ID, process.env.ENVIRONMENT_NAME );
 // var client = new belvo( /* ClientId */ '3f9f5b25-7b96-478b-8ff9-7129e1ffc4e7', /* SecretId */ 'YQDOuSNUnQ0ehD_-lq2Y*#AHa9O3PPDVb1xGItkoG_g9NTf29lebuObvd*@lRd66',/* Environment */ 'development' );
 const transacoes = []
