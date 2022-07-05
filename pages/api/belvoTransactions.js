@@ -8,7 +8,8 @@ transacoes.push('OFXHEADER:100 DATA:OFXSGML VERSION:102 SECURITY:NONE ENCODING:U
 return client.connect()
   .then(async() => {
     // Filtrando resultados para ter transações entre um período de tempo
-      await client.transactions.list({ filters: { page: 1, link: '7bffbc3f-c0b1-493a-b527-9d0775555fc4', value_date__range: "2022-04-01,2022-06-27"} })
+      // await client.transactions.list({ filters: { page: 1, link: '7bffbc3f-c0b1-493a-b527-9d0775555fc4', value_date__range: "2022-04-01,2022-06-27"} })
+      await client.transactions.list({ filters: { page: 1, link: '0a9d8435-d29e-4e6a-9609-1c849680366b', value_date__range: "2022-04-01,2022-06-27"} })
       .then((response) => {
 
         // OFX - transactions
