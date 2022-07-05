@@ -23,7 +23,8 @@ return client.connect()
         // sendOFX(transacoes)
         console.log(transacoes)
         // console.log(transacoes)
-        res.json(transacoes);
+        
+        res.json(transacoes.toString().replaceAll(',',''));
       })
       .catch(function (error) { 
         res.status(500).send({
